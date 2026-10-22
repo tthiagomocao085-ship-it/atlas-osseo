@@ -1,0 +1,1713 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Atlas científico do tecido ósseo: anatomia, histologia, composição química, fisiologia, biomecânica e reparação óssea.">
+  <meta name="author" content="Alessandro">
+
+  <title>Atlas Ósseo — Estudo do Tecido Ósseo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --paper: #f7f2e8;
+      --paper-light: #fffdf7;
+      --paper-dark: #e9dfcd;
+      --ink: #29271f;
+      --muted: #70685b;
+      --wine: #702d37;
+      --wine-dark: #4d2029;
+      --gold: #a48750;
+      --line: #d7c9ae;
+      --green: #526a56;
+      --blue: #526d80;
+      --shadow: 0 14px 40px rgba(49, 37, 24, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 12% 8%, rgba(164,135,80,.08), transparent 30%),
+        #e8e0d2;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    a {
+      color: var(--wine);
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .atlas {
+      width: min(1200px, calc(100% - 36px));
+      margin: 30px auto;
+      padding: clamp(20px, 4vw, 58px);
+      background: var(--paper);
+      border: 1px solid var(--gold);
+      outline: 1px solid rgba(164,135,80,.45);
+      outline-offset: 6px;
+      box-shadow: var(--shadow);
+    }
+
+    .atlas-header {
+      text-align: center;
+      padding: 26px 0 36px;
+      border-bottom: 3px double var(--gold);
+    }
+
+    .school {
+      margin-bottom: 28px;
+      color: var(--wine);
+      font: 600 .75rem/1.6 "DM Sans", sans-serif;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .edition {
+      color: var(--gold);
+      font: 700 .72rem/1.6 "DM Sans", sans-serif;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    .atlas-header h1 {
+      margin: 15px 0 5px;
+      color: var(--wine-dark);
+      font: 700 clamp(2.5rem, 7vw, 5.5rem)/1.08 "Libre Baskerville", Georgia, serif;
+      letter-spacing: -.055em;
+    }
+
+    .subtitle {
+      margin: 16px auto;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .ornament {
+      margin: 22px 0 10px;
+      color: var(--gold);
+      letter-spacing: .6em;
+    }
+
+    .edition-note {
+      color: var(--muted);
+      font: .76rem/1.8 "DM Sans", sans-serif;
+      letter-spacing: .08em;
+    }
+
+    .atlas-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+      padding: 13px 0;
+      background: rgba(247,242,232,.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .atlas-nav a {
+      padding: 6px 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font: 600 .74rem/1.5 "DM Sans", sans-serif;
+      border-radius: 3px;
+    }
+
+    .atlas-nav a:hover {
+      color: white;
+      background: var(--wine);
+    }
+
+    .atlas-main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .chapter {
+      padding: 46px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 80px;
+    }
+
+    .chapter-heading {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+
+    .chapter-number {
+      padding-top: 6px;
+      color: var(--gold);
+      font: 700 .9rem "DM Sans", sans-serif;
+      letter-spacing: .1em;
+    }
+
+    h2, h3, h4 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--wine-dark);
+      font-size: clamp(1.45rem, 3vw, 2.1rem);
+    }
+
+    h3 {
+      margin: 34px 0 12px;
+      color: var(--wine);
+      font-size: 1.22rem;
+    }
+
+    h4 {
+      margin: 18px 0 7px;
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    .lead {
+      color: #514638;
+      font-size: 1.16rem;
+      line-height: 1.9;
+    }
+
+    .small-label {
+      color: var(--gold);
+      font: 700 .69rem/1.7 "DM Sans", sans-serif;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .intro-box {
+      padding: 24px;
+      margin: 26px 0;
+      background: var(--paper-light);
+      border-left: 3px solid var(--gold);
+    }
+
+    .note {
+      padding: 19px 22px;
+      margin: 23px 0;
+      background: #eee6d7;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+    }
+
+    .note strong {
+      color: var(--wine-dark);
+    }
+
+    .note-title {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--wine);
+      font: 700 .75rem "DM Sans", sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .fact {
+      padding: 20px 23px;
+      margin: 25px 0;
+      background: #e7ebdf;
+      border-left: 3px solid var(--green);
+    }
+
+    .fact .note-title {
+      color: var(--green);
+    }
+
+    .formula {
+      padding: 24px;
+      margin: 20px 0;
+      text-align: center;
+      background: var(--paper-light);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--gold);
+    }
+
+    .formula-equation {
+      display: block;
+      margin: 9px 0;
+      color: var(--wine-dark);
+      font: 600 clamp(1.15rem, 3vw, 1.7rem)/1.7 "Source Serif 4", Georgia, serif;
+      overflow-wrap: anywhere;
+    }
+
+    .formula-description {
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .formula small {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 22px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,253,247,.65);
+      font-size: .94rem;
+      line-height: 1.65;
+    }
+
+    th, td {
+      padding: 13px 15px;
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid var(--line);
+    }
+
+    th {
+      color: var(--wine-dark);
+      background: #e9dfcd;
+      font: 700 .78rem/1.5 "DM Sans", sans-serif;
+      letter-spacing: .03em;
+    }
+
+    ul, ol {
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .image-plate {
+      margin: 30px 0;
+      padding: 12px;
+      background: var(--paper-light);
+      border: 1px solid var(--line);
+    }
+
+    .plate-placeholder {
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      padding: 25px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(164,135,80,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(164,135,80,.06) 1px, transparent 1px),
+        #f0e9dc;
+      background-size: 22px 22px;
+    }
+
+    .plate-placeholder-inner {
+      max-width: 440px;
+    }
+
+    .plate-mark {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font: 700 2rem "Libre Baskerville", serif;
+    }
+
+    .plate-placeholder strong {
+      display: block;
+      color: var(--wine-dark);
+      font-family: "Libre Baskerville", serif;
+    }
+
+    .plate-placeholder p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    figcaption {
+      padding: 13px 7px 3px;
+      color: var(--muted);
+      font-size: .85rem;
+      line-height: 1.65;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 22px 0;
+    }
+
+    .info-card {
+      padding: 20px;
+      background: var(--paper-light);
+      border: 1px solid var(--line);
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .info-card p {
+      font-size: .95rem;
+    }
+
+    .reference-list li {
+      margin-bottom: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .closing {
+      padding: 38px 0 8px;
+      text-align: center;
+    }
+
+    .closing h2 {
+      margin-bottom: 13px;
+    }
+
+    .closing-quote {
+      max-width: 650px;
+      margin: 25px auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .atlas-footer {
+      margin-top: 45px;
+      padding-top: 25px;
+      text-align: center;
+      border-top: 3px double var(--gold);
+    }
+
+    .footer-school {
+      color: var(--wine);
+      font: 600 .75rem/1.8 "DM Sans", sans-serif;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .footer-motto {
+      margin-top: 27px;
+      color: #87795f;
+      font: italic .82rem "Source Serif 4", Georgia, serif;
+      letter-spacing: .07em;
+    }
+
+    .footer-credit {
+      margin-top: 12px;
+      color: #a39a89;
+      font: .65rem "DM Sans", sans-serif;
+      letter-spacing: .13em;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 25px;
+      color: var(--muted);
+      font: .72rem "DM Sans", sans-serif;
+      text-decoration: none;
+    }
+
+    .back-top:hover {
+      color: var(--wine);
+    }
+
+    @media (max-width: 650px) {
+      body {
+        font-size: 16px;
+      }
+
+      .atlas {
+        width: calc(100% - 20px);
+        margin: 14px auto;
+        padding: 20px 16px;
+      }
+
+      .chapter {
+        padding: 32px 0;
+      }
+
+      .chapter-heading {
+        grid-template-columns: 30px 1fr;
+        gap: 10px;
+      }
+
+      .two-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .atlas-nav {
+        position: static;
+      }
+
+      .plate-placeholder {
+        min-height: 180px;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .atlas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+      }
+
+      .atlas-nav, .back-top {
+        display: none;
+      }
+
+      .chapter {
+        break-inside: avoid;
+      }
+
+      .formula, .note, .fact, .image-plate {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body id="topo">
+  <div class="atlas">
+
+    <header class="atlas-header">
+      <div class="school">E. E. Nathercia Pompeo dos Santos</div>
+
+      <div class="edition">Coleção de estudos biológicos · Volume I</div>
+
+      <h1>Atlas Ósseo</h1>
+
+      <p class="subtitle">
+        Uma investigação sobre a arquitetura, a composição e a dinâmica
+        biológica do tecido ósseo humano.
+      </p>
+
+      <div class="ornament">✦ ───────── ✦ ───────── ✦</div>
+
+      <div class="edition-note">
+        HISTOLOGIA · ANATOMIA · FISIOLOGIA · BIOFÍSICA
+      </div>
+    </header>
+
+    <nav class="atlas-nav" aria-label="Navegação do atlas">
+      <a href="#apresentacao">Apresentação</a>
+      <a href="#fundamentos">Fundamentos</a>
+      <a href="#organizacao">Anatomia</a>
+      <a href="#histologia">Histologia</a>
+      <a href="#composicao">Química</a>
+      <a href="#celulas">Células</a>
+      <a href="#remodelacao">Remodelação</a>
+      <a href="#biomecanica">Biomecânica</a>
+      <a href="#fraturas">Fraturas</a>
+      <a href="#referencias">Referências</a>
+    </nav>
+
+    <main class="atlas-main">
+
+      <!-- APRESENTAÇÃO -->
+      <section class="chapter" id="apresentacao">
+        <div class="chapter-heading">
+          <div class="chapter-number">00</div>
+          <div>
+            <div class="small-label">Introdução geral</div>
+            <h2>O osso: estrutura viva, dinâmica e adaptável</h2>
+          </div>
+        </div>
+
+        <p class="lead">
+          O tecido ósseo é um tecido conjuntivo especializado, mineralizado
+          e metabolicamente ativo. Embora apresente rigidez suficiente para
+          sustentar o corpo, permanece biologicamente dinâmico: suas células
+          detectam estímulos mecânicos, modificam a matriz extracelular e
+          participam continuamente da manutenção do esqueleto.
+        </p>
+
+        <p>
+          Estudar o osso significa compreender a integração entre química,
+          biologia celular, anatomia e física. A resistência do esqueleto não
+          depende apenas da quantidade de mineral presente, mas também da
+          organização microscópica, da qualidade do colágeno, da geometria
+          dos ossos e da capacidade de reparação dos tecidos.
+        </p>
+
+        <div class="intro-box">
+          <span class="small-label">Questão central</span>
+          <p>
+            Como uma estrutura rígida consegue permanecer viva, adaptar-se
+            às cargas, armazenar minerais e reparar danos ao longo da vida?
+          </p>
+          <p>
+            A resposta está na interação entre células especializadas,
+            matriz orgânica, cristais minerais, vasos sanguíneos e sinais
+            bioquímicos.
+          </p>
+        </div>
+
+        <h3>Objetivos de aprendizagem</h3>
+
+        <ul>
+          <li>Identificar a organização macroscópica e microscópica do osso.</li>
+          <li>Explicar a composição orgânica e mineral da matriz óssea.</li>
+          <li>Diferenciar osteoblastos, osteócitos e osteoclastos.</li>
+          <li>Interpretar fórmulas relacionadas à mineralização e à biomecânica.</li>
+          <li>Compreender a remodelação e as etapas gerais da consolidação de fraturas.</li>
+          <li>Relacionar atividade física, nutrição, hormônios e homeostase mineral.</li>
+        </ul>
+
+        <div class="fact">
+          <span class="note-title">Uma distinção importante</span>
+          O osso não é simplesmente uma pedra dentro do organismo. É um tecido
+          vascularizado, inervado e continuamente renovado, capaz de responder
+          às necessidades mecânicas e metabólicas do corpo.
+        </div>
+      </section>
+
+      <!-- FUNDAMENTOS -->
+      <section class="chapter" id="fundamentos">
+        <div class="chapter-heading">
+          <div class="chapter-number">01</div>
+          <div>
+            <div class="small-label">Conceitos fundamentais</div>
+            <h2>Funções e propriedades do tecido ósseo</h2>
+          </div>
+        </div>
+
+        <h3>1.1 Sustentação e proteção</h3>
+
+        <p>
+          O esqueleto forma uma estrutura de suporte para os tecidos moles e
+          oferece pontos de fixação para músculos, tendões e ligamentos. O
+          crânio protege estruturas encefálicas; as vértebras envolvem a
+          medula espinal; e a caixa torácica auxilia na proteção de órgãos
+          torácicos.
+        </p>
+
+        <h3>1.2 Movimento</h3>
+
+        <p>
+          Os ossos atuam como elementos rígidos de um sistema de alavancas.
+          Quando os músculos se contraem, aplicam forças aos ossos por meio
+          dos tendões. As articulações permitem que essas forças produzam
+          movimentos controlados.
+        </p>
+
+        <h3>1.3 Reserva mineral</h3>
+
+        <p>
+          A matriz óssea armazena grande parte do cálcio e do fósforo do
+          organismo. Esses elementos participam de processos como a
+          contração muscular, a transmissão de sinais nervosos, a
+          sinalização celular e a formação de moléculas energéticas.
+        </p>
+
+        <h3>1.4 Hematopoiese</h3>
+
+        <p>
+          A medula óssea vermelha contém células-tronco hematopoéticas e
+          microambientes especializados na produção de células sanguíneas,
+          incluindo eritrócitos, leucócitos e plaquetas. A distribuição
+          desse tecido varia com a idade e com a região do esqueleto.
+        </p>
+
+        <h3>1.5 Adaptação biológica</h3>
+
+        <p>
+          A estrutura óssea responde a estímulos mecânicos e bioquímicos.
+          A atividade física apropriada pode favorecer a manutenção da
+          massa e da resistência ósseas, enquanto a imobilização prolongada
+          pode contribuir para a perda de tecido em determinadas condições.
+        </p>
+
+        <div class="note">
+          <span class="note-title">Conceito-chave</span>
+          A função de um osso resulta da interação entre sua forma, sua
+          arquitetura interna, sua composição material e as forças que
+          recebe ao longo do tempo.
+        </div>
+      </section>
+
+      <!-- ANATOMIA -->
+      <section class="chapter" id="organizacao">
+        <div class="chapter-heading">
+          <div class="chapter-number">02</div>
+          <div>
+            <div class="small-label">Anatomia macroscópica</div>
+            <h2>A arquitetura de um osso longo</h2>
+          </div>
+        </div>
+
+        <p>
+          Ossos longos, como o fêmur e o úmero, apresentam regiões
+          especializadas que distribuem cargas, protegem a medula óssea e
+          permitem o crescimento durante o desenvolvimento.
+        </p>
+
+        <figure class="image-plate">
+          <div class="plate-placeholder">
+            <div class="plate-placeholder-inner">
+              <span class="plate-mark">Prancha I</span>
+              <strong>Anatomia de um osso longo</strong>
+              <p>
+                Espaço reservado para uma ilustração anatômica com
+                identificação da diáfise, epífises, metáfises, periósteo,
+                endósteo, osso compacto, osso esponjoso e cavidade medular.
+              </p>
+            </div>
+          </div>
+          <figcaption>
+            Figura 1 — Organização macroscópica de um osso longo.
+            A ilustração definitiva deverá identificar as regiões e os
+            revestimentos do tecido ósseo.
+          </figcaption>
+        </figure>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Estrutura</th>
+                <th>Características</th>
+                <th>Importância funcional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Diáfise</strong></td>
+                <td>Corpo alongado do osso.</td>
+                <td>Contribui para a resistência à flexão e à torção.</td>
+              </tr>
+              <tr>
+                <td><strong>Epífises</strong></td>
+                <td>Extremidades de um osso longo.</td>
+                <td>Participam das articulações e contêm osso esponjoso.</td>
+              </tr>
+              <tr>
+                <td><strong>Metáfises</strong></td>
+                <td>Regiões de transição entre diáfise e epífises.</td>
+                <td>Associadas à placa de crescimento durante o desenvolvimento.</td>
+              </tr>
+              <tr>
+                <td><strong>Periósteo</strong></td>
+                <td>Revestimento externo, exceto nas superfícies articulares.</td>
+                <td>Contém vasos, nervos e células importantes para o crescimento e reparo.</td>
+              </tr>
+              <tr>
+                <td><strong>Endósteo</strong></td>
+                <td>Camada celular que reveste superfícies ósseas internas.</td>
+                <td>Participa da remodelação e da atividade das células ósseas.</td>
+              </tr>
+              <tr>
+                <td><strong>Cavidade medular</strong></td>
+                <td>Espaço interno da diáfise.</td>
+                <td>Abriga medula óssea e estruturas vasculares.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>2.1 Osso compacto e osso esponjoso</h3>
+
+        <div class="two-columns">
+          <div class="info-card">
+            <h3>Osso compacto</h3>
+            <p>
+              Apresenta uma organização densa e, em muitas regiões, sistemas
+              de lamelas concêntricas organizadas em torno de canais
+              vasculares. É especialmente importante para a resistência
+              estrutural do osso.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osso esponjoso</h3>
+            <p>
+              É formado por trabéculas que delimitam espaços preenchidos por
+              medula e vasos. Sua arquitetura distribui cargas com eficiência
+              e permite a presença de tecido hematopoético em regiões
+              apropriadas.
+            </p>
+          </div>
+        </div>
+
+        <h3>2.2 Classificação morfológica</h3>
+
+        <ul>
+          <li><strong>Longos:</strong> fêmur, tíbia, úmero e falanges.</li>
+          <li><strong>Curtos:</strong> muitos ossos do carpo e do tarso.</li>
+          <li><strong>Planos:</strong> partes dos ossos do crânio, esterno e escápula.</li>
+          <li><strong>Irregulares:</strong> vértebras e alguns ossos da face.</li>
+          <li><strong>Sesamoides:</strong> patela, por exemplo, desenvolvida em um tendão.</li>
+        </ul>
+
+        <div class="fact">
+          <span class="note-title">Fato anatômico</span>
+          A forma do osso está relacionada à sua função, mas não determina
+          sozinha toda a sua resistência. A espessura cortical, a orientação
+          das trabéculas, a composição da matriz e a direção da carga também
+          são relevantes.
+        </div>
+      </section>
+
+      <!-- HISTOLOGIA -->
+      <section class="chapter" id="histologia">
+        <div class="chapter-heading">
+          <div class="chapter-number">03</div>
+          <div>
+            <div class="small-label">Análise microscópica</div>
+            <h2>Histologia: a organização do tecido ósseo</h2>
+          </div>
+        </div>
+
+        <p>
+          Histologia é o estudo microscópico dos tecidos. No tecido ósseo,
+          a matriz extracelular mineralizada envolve células que permanecem
+          conectadas a uma rede de comunicação e nutrição.
+        </p>
+
+        <h3>3.1 Tecido ósseo lamelar e não lamelar</h3>
+
+        <p>
+          O tecido ósseo lamelar apresenta matriz organizada em lamelas.
+          É a forma predominante no esqueleto adulto saudável. Já o tecido
+          ósseo não lamelar, também chamado de imaturo ou entrelaçado,
+          possui fibras colágenas menos organizadas e pode aparecer durante
+          o desenvolvimento ou na fase inicial da reparação de uma fratura.
+        </p>
+
+        <figure class="image-plate">
+          <div class="plate-placeholder">
+            <div class="plate-placeholder-inner">
+              <span class="plate-mark">Prancha II</span>
+              <strong>Osteón e tecido ósseo compacto</strong>
+              <p>
+                Espaço reservado para micrografia identificando lamelas
+                concêntricas, canal central, lacunas osteocíticas e
+                canalículos.
+              </p>
+            </div>
+          </div>
+          <figcaption>
+            Figura 2 — Representação histológica do osso compacto.
+            Os detalhes deverão ser confirmados na imagem escolhida para o atlas.
+          </figcaption>
+        </figure>
+
+        <h3>3.2 O osteón</h3>
+
+        <p>
+          O osteón, ou sistema de Havers, é uma unidade estrutural
+          característica do osso compacto lamelar. É constituído por
+          lamelas concêntricas em torno de um canal central que pode
+          conter vasos sanguíneos e fibras nervosas.
+        </p>
+
+        <p>
+          Os osteócitos ficam alojados em pequenas lacunas entre as lamelas.
+          Prolongamentos celulares percorrem canalículos microscópicos,
+          favorecendo a comunicação entre células e a troca de substâncias
+          no tecido mineralizado.
+        </p>
+
+        <h3>3.3 Lacunas e canalículos</h3>
+
+        <p>
+          As lacunas são pequenas cavidades da matriz onde ficam os
+          osteócitos. Os canalículos são canais microscópicos que conectam
+          essas regiões. A rede lacunocanalicular participa da comunicação
+          celular e da percepção de estímulos mecânicos.
+        </p>
+
+        <div class="note">
+          <span class="note-title">Como interpretar uma lâmina</span>
+          Em uma micrografia, a identificação de um osteón exige observar
+          a organização das lamelas em torno de um canal central. Um
+          espaço isolado não deve ser classificado automaticamente como
+          canal de Havers: contexto e arquitetura são essenciais.
+        </div>
+
+        <h3>3.4 Matriz extracelular</h3>
+
+        <p>
+          A matriz óssea possui uma fração orgânica, rica em colágeno tipo I
+          e outras proteínas, e uma fração inorgânica, composta principalmente
+          por minerais à base de cálcio e fosfato. Essa combinação explica
+          parte importante das propriedades mecânicas do osso.
+        </p>
+      </section>
+
+      <!-- COMPOSIÇÃO QUÍMICA -->
+      <section class="chapter" id="composicao">
+        <div class="chapter-heading">
+          <div class="chapter-number">04</div>
+          <div>
+            <div class="small-label">Bioquímica do esqueleto</div>
+            <h2>A química da matriz óssea</h2>
+          </div>
+        </div>
+
+        <p class="lead">
+          A resistência do osso depende da cooperação entre uma matriz
+          orgânica capaz de suportar deformações e uma fase mineral que
+          contribui para a rigidez e a resistência à compressão.
+        </p>
+
+        <h3>4.1 A fase mineral: hidroxiapatita</h3>
+
+        <p>
+          O principal mineral associado à matriz óssea é uma forma biológica
+          de apatita, frequentemente representada pela fórmula ideal da
+          hidroxiapatita. O mineral presente no osso real contém substituições
+          iônicas e apresenta características distintas de um cristal
+          perfeitamente puro.
+        </p>
+
+        <div class="formula">
+          <span class="small-label">Fórmula química ideal</span>
+          <span class="formula-equation">
+            Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>(OH)<sub>2</sub>
+          </span>
+          <div class="formula-description">
+            Hidroxiapatita: fosfato de cálcio cristalino.
+          </div>
+          <small>
+            Ca = cálcio · PO₄ = fosfato · OH = grupo hidroxila
+          </small>
+        </div>
+
+        <p>
+          Na fórmula, dez átomos de cálcio estão associados a seis grupos
+          fosfato e dois grupos hidroxila. A organização cristalina desse
+          mineral contribui para a rigidez da matriz. No tecido biológico,
+          porém, a composição é variável e pode incluir carbonato, magnésio
+          e outros íons.
+        </p>
+
+        <h3>4.2 A fase orgânica: colágeno tipo I</h3>
+
+        <p>
+          O colágeno tipo I é a principal proteína estrutural da matriz
+          orgânica do osso. Suas moléculas formam estruturas fibrilares
+          organizadas, fornecendo uma base sobre a qual ocorre a deposição
+          mineral.
+        </p>
+
+        <p>
+          A matriz orgânica também inclui proteínas não colagênicas que
+          participam da adesão celular, da organização da matriz e da
+          regulação da mineralização.
+        </p>
+
+        <div class="two-columns">
+          <div class="info-card">
+            <h3>Componente mineral</h3>
+            <p>
+              Contribui para a rigidez e para a resistência à compressão.
+              A mineralização inadequada pode comprometer a qualidade
+              mecânica do tecido.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Componente orgânico</h3>
+            <p>
+              Contribui para a resistência à tração e para a capacidade de
+              absorver energia antes da falha, embora essas propriedades
+              dependam da organização e da interação de toda a matriz.
+            </p>
+          </div>
+        </div>
+
+        <figure class="image-plate">
+          <div class="plate-placeholder">
+            <div class="plate-placeholder-inner">
+              <span class="plate-mark">Prancha III</span>
+              <strong>Matriz orgânica e fase mineral</strong>
+              <p>
+                Espaço reservado para uma ilustração molecular que mostre
+                fibras de colágeno e cristais minerais associados.
+              </p>
+            </div>
+          </div>
+          <figcaption>
+            Figura 3 — Representação conceitual da matriz óssea.
+            A ilustração deverá distinguir a rede orgânica da fase mineral.
+          </figcaption>
+        </figure>
+
+        <h3>4.3 Por que o osso precisa das duas fases?</h3>
+
+        <p>
+          A matriz mineralizada apresenta propriedades que não seriam
+          obtidas da mesma maneira por seus componentes isolados. O mineral
+          fornece rigidez, enquanto a matriz orgânica contribui para a
+          resistência à tração e para mecanismos de dissipação de energia.
+          A arquitetura microscópica e a interação entre essas fases
+          também são decisivas.
+        </p>
+
+        <div class="fact">
+          <span class="note-title">Experimento conceitual</span>
+          Imagine comparar um material muito mineralizado, mas com uma
+          matriz orgânica comprometida, com outro cuja matriz não se
+          mineraliza adequadamente. Ambos podem apresentar problemas
+          mecânicos, mas por motivos diferentes. A qualidade do osso
+          depende do equilíbrio e da organização de seus componentes.
+        </div>
+
+        <h3>4.4 O cálcio e o fosfato no organismo</h3>
+
+        <p>
+          O cálcio participa da contração muscular, da transmissão
+          neuromuscular e de processos de sinalização celular. O fosfato
+          participa da formação de ATP, dos ácidos nucleicos e de diversas
+          reações metabólicas. O esqueleto funciona como uma importante
+          reserva desses minerais, cuja concentração no sangue é regulada
+          por mecanismos fisiológicos.
+        </p>
+
+        <div class="note">
+          <span class="note-title">Atenção à interpretação</span>
+          A fórmula da hidroxiapatita descreve um mineral ideal, não a
+          composição completa do osso. Também não existe uma única
+          porcentagem universal de matéria orgânica e mineral válida
+          para todas as regiões, idades e condições fisiológicas.
+        </div>
+      </section>
+
+      <!-- CÉLULAS -->
+      <section class="chapter" id="celulas">
+        <div class="chapter-heading">
+          <div class="chapter-number">05</div>
+          <div>
+            <div class="small-label">Biologia celular</div>
+            <h2>As células que constroem, mantêm e reabsorvem o osso</h2>
+          </div>
+        </div>
+
+        <h3>5.1 Células osteoprogenitoras</h3>
+
+        <p>
+          São células precursoras capazes de originar osteoblastos em
+          contextos apropriados. Encontram-se associadas a regiões como
+          o periósteo e o endósteo e participam do crescimento e da
+          reparação do tecido ósseo.
+        </p>
+
+        <h3>5.2 Osteoblastos: formação da matriz</h3>
+
+        <p>
+          Os osteoblastos sintetizam osteoide, a matriz orgânica ainda não
+          mineralizada, e participam da regulação da mineralização. Durante
+          o processo de formação óssea, alguns osteoblastos ficam envolvidos
+          pela matriz que produziram e se diferenciam em osteócitos.
+        </p>
+
+        <h3>5.3 Osteócitos: sensores e reguladores</h3>
+
+        <p>
+          Os osteócitos são células maduras situadas em lacunas da matriz
+          mineralizada. Por meio de seus prolongamentos e da rede de
+          comunicação celular, participam da detecção de estímulos
+          mecânicos e da regulação da remodelação.
+        </p>
+
+        <p>
+          Uma das moléculas produzidas pelos osteócitos é a esclerostina,
+          que pode inibir a via de sinalização Wnt/β-catenina e reduzir
+          determinados estímulos à formação óssea. A regulação dessa via
+          é complexa e depende do contexto fisiológico.
+        </p>
+
+        <h3>5.4 Osteoclastos: reabsorção óssea</h3>
+
+        <p>
+          Os osteoclastos são células especializadas na reabsorção da
+          matriz mineralizada. Criam um microambiente ácido que favorece
+          a dissolução do mineral e liberam enzimas que degradam componentes
+          orgânicos da matriz.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Célula</th>
+                <th>Função principal</th>
+                <th>Conceito essencial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Osteoprogenitora</td>
+                <td>Origina células da linhagem osteoblástica.</td>
+                <td>Precursor celular.</td>
+              </tr>
+              <tr>
+                <td>Osteoblasto</td>
+                <td>Sintetiza osteoide e participa da mineralização.</td>
+                <td>Formação óssea.</td>
+              </tr>
+              <tr>
+                <td>Osteócito</td>
+                <td>Mantém a matriz e participa da mecanossensibilidade.</td>
+                <td>Comunicação e regulação.</td>
+              </tr>
+              <tr>
+                <td>Osteoclasto</td>
+                <td>Reabsorve matriz mineralizada.</td>
+                <td>Remodelação e reciclagem.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="fact">
+          <span class="note-title">Fato de histologia</span>
+          Osteoblastos e osteoclastos não são versões diferentes da mesma
+          célula: pertencem a linhagens celulares distintas e desempenham
+          funções complementares na manutenção do esqueleto.
+        </div>
+      </section>
+
+      <!-- REMODELAÇÃO -->
+      <section class="chapter" id="remodelacao">
+        <div class="chapter-heading">
+          <div class="chapter-number">06</div>
+          <div>
+            <div class="small-label">Fisiologia óssea</div>
+            <h2>Remodelação: um tecido em renovação</h2>
+          </div>
+        </div>
+
+        <p>
+          A remodelação óssea é um processo coordenado no qual porções
+          do tecido são reabsorvidas e posteriormente substituídas por
+          matriz nova. Esse mecanismo contribui para a manutenção da
+          integridade estrutural, para a adaptação mecânica e para a
+          regulação do metabolismo mineral.
+        </p>
+
+        <h3>6.1 Etapas gerais da remodelação</h3>
+
+        <ol>
+          <li><strong>Ativação:</strong> sinais locais recrutam e regulam as células envolvidas.</li>
+          <li><strong>Reabsorção:</strong> osteoclastos removem uma porção da matriz existente.</li>
+          <li><strong>Reversão:</strong> ocorre uma transição entre a reabsorção e a formação.</li>
+          <li><strong>Formação:</strong> osteoblastos depositam osteoide.</li>
+          <li><strong>Mineralização:</strong> a matriz recém-formada passa a incorporar mineral.</li>
+        </ol>
+
+        <h3>6.2 O sistema RANK, RANKL e OPG</h3>
+
+        <p>
+          A diferenciação e a atividade dos osteoclastos são reguladas,
+          entre outros mecanismos, pelo sistema RANK/RANKL/OPG.
+        </p>
+
+        <ul>
+          <li><strong>RANK:</strong> receptor presente em células da linhagem osteoclástica.</li>
+          <li><strong>RANKL:</strong> molécula sinalizadora que se liga ao RANK e favorece a formação e a atividade dos osteoclastos.</li>
+          <li><strong>OPG:</strong> osteoprotegerina, proteína que atua como receptor-isca e pode impedir a interação entre RANKL e RANK.</li>
+        </ul>
+
+        <div class="formula">
+          <span class="small-label">Esquema de sinalização</span>
+          <span class="formula-equation">RANKL + RANK → sinalização osteoclástica</span>
+          <div class="formula-description">
+            A interação favorece a diferenciação e a atividade dos osteoclastos,
+            dependendo dos demais sinais presentes.
+          </div>
+          <span class="formula-equation">OPG + RANKL → bloqueio da interação com RANK</span>
+          <div class="formula-description">
+            A OPG pode limitar a sinalização que promove a osteoclastogênese.
+          </div>
+          <small>
+            Esquema simplificado; não representa todas as etapas moleculares.
+          </small>
+        </div>
+
+        <h3>6.3 Balanço entre formação e reabsorção</h3>
+
+        <p>
+          A manutenção da massa óssea depende do balanço entre a formação
+          e a reabsorção. Ao longo da vida, esse balanço é influenciado por
+          idade, hormônios, nutrição, atividade física, genética, doenças
+          e medicamentos.
+        </p>
+
+        <div class="formula">
+          <span class="small-label">Modelo conceitual</span>
+          <span class="formula-equation">
+            Variação da massa óssea ≈ formação − reabsorção
+          </span>
+          <div class="formula-description">
+            Quando a formação supera a reabsorção, a massa tende a aumentar;
+            quando ocorre o inverso, tende a diminuir.
+          </div>
+          <small>
+            É um modelo didático, não uma equação clínica de previsão.
+          </small>
+        </div>
+
+        <h3>6.4 Hormônios e homeostase mineral</h3>
+
+        <p>
+          O paratormônio (PTH), produzido pelas glândulas paratireoides,
+          participa da regulação do cálcio sanguíneo. Seus efeitos dependem
+          do padrão de exposição, dos tecidos envolvidos e do contexto
+          fisiológico. A vitamina D ativa aumenta a absorção intestinal de
+          cálcio e fosfato, enquanto a calcitonina pode inibir a atividade
+          osteoclástica em determinadas circunstâncias.
+        </p>
+
+        <p>
+          Os rins também são essenciais para o equilíbrio mineral, pois
+          regulam a excreção de cálcio e fosfato e participam da ativação
+          da vitamina D. Por isso, o metabolismo ósseo não pode ser
+          compreendido apenas observando o esqueleto isoladamente.
+        </p>
+
+        <div class="note">
+          <span class="note-title">Uma nuance importante</span>
+          O PTH não deve ser classificado simplesmente como “bom” ou “ruim”
+          para os ossos. A resposta depende da duração e do padrão do sinal,
+          além de fatores como idade e estado metabólico.
+        </div>
+      </section>
+
+      <!-- BIOMECÂNICA -->
+      <section class="chapter" id="biomecanica">
+        <div class="chapter-heading">
+          <div class="chapter-number">07</div>
+          <div>
+            <div class="small-label">Física aplicada à biologia</div>
+            <h2>Biomecânica: forças, tensão e deformação</h2>
+          </div>
+        </div>
+
+        <p>
+          A biomecânica estuda como as forças atuam sobre estruturas
+          biológicas. No osso, a resposta mecânica depende da magnitude
+          da carga, de sua direção, da velocidade de aplicação, da
+          geometria do tecido e de suas propriedades materiais.
+        </p>
+
+        <h3>7.1 Força e área: tensão mecânica</h3>
+
+        <p>
+          A mesma força pode produzir efeitos diferentes dependendo da
+          área sobre a qual é distribuída. A tensão mecânica média relaciona
+          a força aplicada à área transversal considerada.
+        </p>
+
+        <div class="formula">
+          <span class="small-label">Fórmula 1 · Tensão normal média</span>
+          <span class="formula-equation">σ = F / A</span>
+          <div class="formula-description">
+            σ = tensão mecânica · F = força aplicada · A = área transversal
+          </div>
+          <small>
+            No Sistema Internacional, a tensão é expressa em pascals (Pa),
+            equivalentes a newtons por metro quadrado (N/m²).
+          </small>
+        </div>
+
+        <h4>Exemplo resolvido</h4>
+
+        <p>
+          Considere, apenas para fins didáticos, uma força axial de
+          1.000 N distribuída uniformemente por uma área de 0,0005 m².
+        </p>
+
+        <div class="formula">
+          <span class="formula-equation">
+            σ = 1.000 / 0,0005
+          </span>
+          <span class="formula-equation">
+            σ = 2.000.000 Pa = 2 MPa
+          </span>
+          <div class="formula-description">
+            O resultado é uma tensão média hipotética de 2 megapascals.
+          </div>
+        </div>
+
+        <p>
+          O cálculo mostra que a tensão aumenta quando a força aumenta
+          ou quando a área diminui. Entretanto, um osso real possui
+          geometria irregular, distribuição não uniforme de tensões e
+          comportamento complexo; o exemplo não determina, por si só,
+          a segurança de uma carga sobre um osso.
+        </p>
+
+        <h3>7.2 Deformação relativa</h3>
+
+        <p>
+          A deformação relativa descreve a mudança de comprimento de um
+          material em comparação com seu comprimento inicial. Ela não
+          possui unidade, pois representa a razão entre dois comprimentos.
+        </p>
+
+        <div class="formula">
+          <span class="small-label">Fórmula 2 · Deformação longitudinal</span>
+          <span class="formula-equation">ε = ΔL / L₀</span>
+          <div class="formula-description">
+            ε = deformação relativa · ΔL = variação de comprimento ·
+            L₀ = comprimento inicial
+          </div>
+        </div>
+
+        <h4>Exemplo resolvido</h4>
+
+        <p>
+          Se um corpo de prova com 100 mm de comprimento sofre uma
+          variação de comprimento de 0,1 mm:
+        </p>
+
+        <div class="formula">
+          <span class="formula-equation">ε = 0,1 / 100 = 0,001</span>
+          <span class="formula-equation">ε = 0,1%</span>
+          <div class="formula-description">
+            A deformação relativa corresponde a 0,1% do comprimento inicial.
+          </div>
+        </div>
+
+        <h3>7.3 Módulo de Young: rigidez do material</h3>
+
+        <p>
+          Dentro da região aproximadamente linear e elástica de certos
+          materiais, a razão entre tensão e deformação é descrita pelo
+          módulo de Young. Esse parâmetro representa uma medida da rigidez
+          do material nessa condição de ensaio.
+        </p>
+
+        <div class="formula">
+          <span class="small-label">Fórmula 3 · Módulo de elasticidade</span>
+          <span class="formula-equation">E = σ / ε</span>
+          <div class="formula-description">
+            E = módulo de Young · σ = tensão · ε = deformação relativa
+          </div>
+          <small>
+            A unidade de E é o pascal. A relação linear é válida somente
+            quando o comportamento do material permite essa aproximação.
+          </small>
+        </div>
+
+        <h4>Exemplo integrado</h4>
+
+        <p>
+          Usando a tensão de 2 MPa calculada anteriormente e uma deformação
+          hipotética de 0,001:
+        </p>
+
+        <div class="formula">
+          <span class="formula-equation">E = 2 MPa / 0,001</span>
+          <span class="formula-equation">E = 2.000 MPa = 2 GPa</span>
+          <div class="formula-description">
+            Resultado ilustrativo para um corpo de prova hipotético;
+            não representa um valor universal para o tecido ósseo.
+          </div>
+        </div>
+
+        <h3>7.4 Compressão, tração, flexão e torção</h3>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo de solicitação</th>
+                <th>Descrição</th>
+                <th>Exemplo conceitual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Compressão</td>
+                <td>Forças tendem a aproximar regiões do material.</td>
+                <td>Carga axial sobre um osso.</td>
+              </tr>
+              <tr>
+                <td>Tração</td>
+                <td>Forças tendem a afastar regiões do material.</td>
+                <td>Forças que produzem alongamento.</td>
+              </tr>
+              <tr>
+                <td>Flexão</td>
+                <td>Uma carga provoca curvatura.</td>
+                <td>Um osso submetido a uma força transversal.</td>
+              </tr>
+              <tr>
+                <td>Torção</td>
+                <td>Um momento tende a girar uma seção em relação a outra.</td>
+                <td>Forças que provocam rotação relativa.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>7.5 Lei de Wolff e adaptação óssea</h3>
+
+        <p>
+          A chamada lei de Wolff é um princípio histórico que relaciona
+          a arquitetura óssea às condições mecânicas às quais o tecido é
+          submetido. Em termos modernos, a adaptação óssea envolve
+          mecanotransdução: estímulos físicos são convertidos em sinais
+          celulares capazes de modificar a formação e a reabsorção.
+        </p>
+
+        <p>
+          A adaptação não é instantânea nem ilimitada. A resposta depende
+          da intensidade, frequência e duração dos estímulos, do descanso,
+          da idade, da saúde e de outros fatores biológicos. Cargas
+          excessivas ou repetitivas sem recuperação adequada podem
+          contribuir para lesões por sobrecarga.
+        </p>
+
+        <div class="fact">
+          <span class="note-title">Fato de biomecânica</span>
+          Um material mais rígido não é necessariamente mais resistente
+          em todas as situações. Rigidez, resistência máxima, tenacidade
+          e capacidade de absorver energia são propriedades distintas.
+        </div>
+      </section>
+
+      <!-- FRATURAS -->
+      <section class="chapter" id="fraturas">
+        <div class="chapter-heading">
+          <div class="chapter-number">08</div>
+          <div>
+            <div class="small-label">Reparação tecidual</div>
+            <h2>Fraturas e consolidação óssea</h2>
+          </div>
+        </div>
+
+        <p>
+          Uma fratura interrompe a continuidade do osso e desencadeia uma
+          resposta de reparação que envolve inflamação, recrutamento celular,
+          formação de tecido de reparo, deposição de matriz e remodelação.
+          O processo varia de acordo com o tipo de fratura, a estabilidade
+          mecânica, a vascularização e as condições gerais do organismo.
+        </p>
+
+        <figure class="image-plate">
+          <div class="plate-placeholder">
+            <div class="plate-placeholder-inner">
+              <span class="plate-mark">Prancha IV</span>
+              <strong>Etapas da consolidação de uma fratura</strong>
+              <p>
+                Espaço reservado para uma sequência ilustrativa:
+                resposta inicial, formação de calo, substituição por
+                osso e remodelação.
+              </p>
+            </div>
+          </div>
+          <figcaption>
+            Figura 4 — Representação esquemática das etapas gerais da
+            consolidação óssea. A duração e a sequência podem variar
+            conforme o tipo de lesão e as condições biológicas.
+          </figcaption>
+        </figure>
+
+        <h3>8.1 Resposta inicial</h3>
+
+        <p>
+          Após a lesão, ocorre uma resposta inflamatória e forma-se um
+          hematoma na região. Células do sistema imune e mediadores
+          bioquímicos participam da remoção de tecidos danificados e da
+          organização das etapas seguintes.
+        </p>
+
+        <h3>8.2 Formação do tecido de reparo</h3>
+
+        <p>
+          Células recrutadas para a região contribuem para a formação
+          de tecido de reparo. Dependendo das condições locais, pode
+          ocorrer a formação de um calo inicialmente fibrocartilaginoso,
+          que ajuda a estabilizar a região.
+        </p>
+
+        <h3>8.3 Formação de osso novo</h3>
+
+        <p>
+          O tecido de reparo pode ser progressivamente substituído por
+          tecido ósseo. Em muitos casos, forma-se inicialmente osso
+          não lamelar, que será remodelado posteriormente.
+        </p>
+
+        <h3>8.4 Remodelação</h3>
+
+        <p>
+          O tecido formado passa por reorganização, com remoção de
+          porções e deposição de matriz em resposta às condições
+          mecânicas e biológicas. A restauração completa da arquitetura
+          pode levar muito mais tempo do que a redução inicial da dor
+          e o retorno parcial da função.
+        </p>
+
+        <div class="note">
+          <span class="note-title">Conceito clínico</span>
+          Nem toda fratura segue exatamente o mesmo caminho. Na consolidação
+          direta, sob condições específicas de estabilidade e contato entre
+          fragmentos, o reparo pode ocorrer com pouca formação de calo
+          externo. Na consolidação indireta, o calo costuma ter papel
+          importante.
+        </div>
+
+        <h3>8.5 Fatores que influenciam a consolidação</h3>
+
+        <ul>
+          <li>Vascularização e condições dos tecidos locais.</li>
+          <li>Estabilidade mecânica e características da fratura.</li>
+          <li>Disponibilidade de nutrientes e estado metabólico.</li>
+          <li>Idade e condições gerais de saúde.</li>
+          <li>Tabagismo, algumas doenças e determinados medicamentos.</li>
+          <li>Infecção e lesões associadas, quando presentes.</li>
+        </ul>
+
+        <p>
+          A consolidação é um processo biológico complexo. O tempo de
+          recuperação e a conduta adequada precisam ser avaliados por
+          profissionais de saúde, conforme cada situação.
+        </p>
+      </section>
+
+      <!-- SÍNTESE -->
+      <section class="chapter" id="sintese">
+        <div class="chapter-heading">
+          <div class="chapter-number">09</div>
+          <div>
+            <div class="small-label">Integração dos conhecimentos</div>
+            <h2>O tecido ósseo como sistema integrado</h2>
+          </div>
+        </div>
+
+        <p>
+          A compreensão do tecido ósseo exige integrar diferentes escalas:
+          desde os íons e as proteínas da matriz até as células, os sistemas
+          microscópicos e o osso inteiro submetido a cargas.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Escala</th>
+                <th>Elemento estudado</th>
+                <th>Questão central</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Molecular</td>
+                <td>Colágeno, minerais e proteínas sinalizadoras.</td>
+                <td>Como a composição influencia as propriedades do tecido?</td>
+              </tr>
+              <tr>
+                <td>Celular</td>
+                <td>Osteoblastos, osteócitos e osteoclastos.</td>
+                <td>Como a matriz é produzida, percebida e reabsorvida?</td>
+              </tr>
+              <tr>
+                <td>Microscópica</td>
+                <td>Lamelas, osteóns, lacunas e trabéculas.</td>
+                <td>Como a arquitetura organiza o tecido?</td>
+              </tr>
+              <tr>
+                <td>Macroscópica</td>
+                <td>Diáfises, epífises e corticais.</td>
+                <td>Como a forma distribui as cargas?</td>
+              </tr>
+              <tr>
+                <td>Sistêmica</td>
+                <td>Esqueleto, rins, intestino e regulação hormonal.</td>
+                <td>Como o organismo mantém o equilíbrio mineral?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Equações fundamentais deste atlas</h3>
+
+        <div class="formula">
+          <span class="formula-equation">
+            Ca<sub>10</sub>(PO<sub>4</sub>)<sub>6</sub>(OH)<sub>2</sub>
+          </span>
+          <div class="formula-description">
+            Fórmula ideal da hidroxiapatita, mineral importante da matriz óssea.
+          </div>
+        </div>
+
+        <div class="formula">
+          <span class="formula-equation">σ = F / A</span>
+          <div class="formula-description">
+            Tensão mecânica média: força dividida pela área transversal.
+          </div>
+        </div>
+
+        <div class="formula">
+          <span class="formula-equation">ε = ΔL / L₀</span>
+          <div class="formula-description">
+            Deformação relativa: variação de comprimento dividida pelo comprimento inicial.
+          </div>
+        </div>
+
+        <div class="formula">
+          <span class="formula-equation">E = σ / ε</span>
+          <div class="formula-description">
+            Módulo de Young na região de comportamento aproximadamente linear e elástico.
+          </div>
+        </div>
+
+        <div class="intro-box">
+          <span class="small-label">Síntese final</span>
+          <p>
+            O tecido ósseo demonstra como forma, composição química,
+            comunicação celular e forças físicas podem atuar em conjunto
+            para produzir uma estrutura resistente, adaptável e viva.
+          </p>
+          <p>
+            Conhecer o osso é compreender não apenas aquilo que sustenta
+            o corpo, mas também um sistema biológico que participa
+            ativamente da homeostase e se transforma ao longo da vida.
+          </p>
+        </div>
+      </section>
+
+      <!-- REFERÊNCIAS -->
+      <section class="chapter" id="referencias">
+        <div class="chapter-heading">
+          <div class="chapter-number">10</div>
+          <div>
+            <div class="small-label">Bibliografia e aprofundamento</div>
+            <h2>Referências científicas</h2>
+          </div>
+        </div>
+
+        <p>
+          As obras abaixo são referências reconhecidas em histologia,
+          anatomia, fisiologia e biologia do tecido ósseo. Devem servir
+          de base para conferir conceitos, aprofundar mecanismos e
+          identificar as fontes das ilustrações que serão incorporadas
+          ao atlas.
+        </p>
+
+        <ol class="reference-list">
+          <li>
+            ROSS, Michael H.; PAWLINA, Wojciech.
+            <em>Histology: A Text and Atlas</em>.
+            Obra de referência para histologia e organização dos tecidos.
+          </li>
+          <li>
+            MESCHER, Anthony L.
+            <em>Junqueira's Basic Histology: Text and Atlas</em>.
+            Referência para matriz extracelular, células ósseas e organização histológica.
+          </li>
+          <li>
+            HALL, John E.; HALL, Michael E.
+            <em>Guyton and Hall Textbook of Medical Physiology</em>.
+            Referência para fisiologia sistêmica e regulação do cálcio.
+          </li>
+          <li>
+            STANDRING, Susan (ed.).
+            <em>Gray's Anatomy: The Anatomical Basis of Clinical Practice</em>.
+            Referência de anatomia humana.
+          </li>
+          <li>
+            FLORENCIO-SILVA, R. et al.
+            Biology of Bone Tissue: Structure, Function, and Factors That
+            Influence Bone Cells. <em>BioMed Research International</em>,
+            2015, artigo 421746.
+            DOI:
+            <a href="https://doi.org/10.1155/2015/421746" target="_blank" rel="noopener noreferrer">
+              10.1155/2015/421746
+            </a>.
+          </li>
+        </ol>
+
+        <div class="note">
+          <span class="note-title">Nota editorial</span>
+          A bibliografia é um ponto de partida. Na versão final, cada
+          ilustração deverá ter sua fonte identificada, e as referências
+          devem ser ajustadas à edição efetivamente consultada.
+          As equações de biomecânica apresentadas aqui são modelos
+          didáticos simplificados.
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="ornament">✦ ───────── ✦</div>
+        <h2>Conhecer para compreender</h2>
+        <p class="closing-quote">
+          “A estrutura revela sua história; a ciência procura compreender
+          os princípios que a tornam possível.”
+        </p>
+        <p>
+          Este atlas reúne conceitos de biologia, química, anatomia e física
+          para apresentar o tecido ósseo como um sistema vivo, organizado
+          e em constante transformação.
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="atlas-footer">
+      <div class="footer-school">
+        E. E. Nathercia Pompeo dos Santos
+      </div>
+
+      <a class="back-top" href="#topo">Voltar ao início ↑</a>
+
+      <div class="footer-motto">biologia, a melhor!</div>
+
+      <div class="footer-credit">by Alessandro</div>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
